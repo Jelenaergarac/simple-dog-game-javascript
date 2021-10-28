@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url('/backback.jpg');
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    color: brown;
+    font-weight: bold;
+    font-family: 'Roboto Mono', sans-serif;
+   
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+
+
+
+
+}
+
+.game-container {
+    position: relative;
+}
+
+.time,
+.score {
+
+    position: absolute;
+    top: 20px;
+    color: blue;
+    font-weight: bold;
+
+}
+
+.time {
+    left: 20px;
+    border: 2px dashed blue;
+    padding: 10px;
+}
+
+.score {
+    right: 20px;
+    border: 5px dashed blue;
+    padding: 8px;
+}
+
+.btn {
+    border: 0;
+    background-color: rgb(73, 17, 17);
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 20px 40px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    background-color: red;
+}
+
+
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-out;
+
+}
+
+.page.up {
+    margin-top: -100vh;
+
+}
+
+
+.choose-animal-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+h1 {
+    line-height: 1.4;
+}
+
+.animals-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+
+}
+
+.animals-list li {
+    margin: 10px;
+}
+
+.choose-animal-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+}
+
+.choose-animal-btn:hover {
+    background-color: white;
+    color: fuchsia;
+}
+
+.choose-animal-btn:active {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.grid {
+    height: 560px;
+    width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    
+ }
+
+
+.grid div {
+    height: 70px;
+    width: 70px;
+border-radius: 15px;
+
+}
+
+.message {
+    line-height: 1.7;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    width: 20%;
+    padding: 50px;
+    z-index: 100;
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 85%;
+    transform: translate(-20%, -110%);
+    transition: transform 0.4s ease-in;
+
+}
+
+.message.visible {
+    opacity: 1;
+    transform: translate(-50%, 150%);
+
+}
